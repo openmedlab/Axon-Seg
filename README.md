@@ -1,35 +1,22 @@
 # Axon-Segmentation
 
-<!-- select Model and/or Data and/or Code as needed>
+**D-LMBmap: a fully automated deep-learning pipeline for whole-brain profiling of neural circuitry** 
 
-### Welcome to OpenMEDLab! 👋
+Zhongyu Li, Zengyi Shang, Jingyi Liu, Haotian Zhen, Entao Zhu, Shilin Zhong, Robyn N. Sturgess, Yitian Zhou, Xuemeng Hu, Xingyue Zhao, Yi Wu, Peiqi Li, Rui Lin & Jing Ren
 
-
----
-
-
-
-
+![pipeline](asset/pipeline.png)
 
 ## Key Features
 
-This repository provides the official implementation of ...
-
-key feature bulletin points here
-
-- 1
-- 2
-- 3
+- Can achieve automated axon segmentation from small cubes to whole brain
+- data
+- model
 
 ## Links
 
-- [Paper](https://)
+- [Paper](https://www.nature.com/articles/s41592-023-01998-6)
 - [Model](https://)
-- [Code](https://) 
-  <!-- [Code] may link to your project at your institute>
-
-
-<!-- give a introduction of your project -->
+- [Code](https://github.com/lmbneuron/D-LMBmap/tree/main/Axon%20Segmentation) 
 
 ## Details
 
