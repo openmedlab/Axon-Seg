@@ -1,15 +1,11 @@
 # Axon-Seg: an end-to-end pipeline for whole-brain axon segmentation
 
-#### **D-LMBmap: a fully automated deep-learning pipeline for whole-brain profiling of neural circuitry** 
-
-*Zhongyu Li, Zengyi Shang, Jingyi Liu, Haotian Zhen, Entao Zhu, Shilin Zhong, Robyn N. Sturgess, Yitian Zhou, Xuemeng Hu, Xingyue Zhao, Yi Wu, Peiqi Li, Rui Lin & Jing Ren*
-
 ![pipeline](asset/pipeline.png)
 
 ## Key Features
-This is the repo for the paper D-LMBmap: a fully automated deep-learning pipeline for whole-brain profiling of neural circuitry:
+This is the repo for the whole-brain axon segmentation of the paper [D-LMBmap: a fully automated deep-learning pipeline for whole-brain profiling of neural circuitry](https://www.nature.com/articles/s41592-023-01998-6)
 - An end-to-end pipeline for whole-brain axon segmentation and profiling
-- Five types of neurons, including serotonergic, GABAergic, dopaminergic, and Cerebellar nuclei neurons, are used to train the automated segmentation models separately and jointly
+- Five types of neurons, including Serotonergic, GABAergic, Dopaminergic, and Cerebellar nuclei neurons, are used to train the automated segmentation models separately and jointly
 - An automated annotation toolkit is provided, greatly reducing the labour-intensive manual input
 
 ## Links
@@ -20,24 +16,20 @@ This is the repo for the paper D-LMBmap: a fully automated deep-learning pipelin
 
 ## Details
 
->Recent proliferation and integration of tissue-clearing methods and light-sheet fluorescence microscopy has created new opportunities to achieve mesoscale three-dimensional whole-brain connectivity mapping with exceptionally high throughput. With the rapid generation of large, high-quality imaging datasets, downstream analysis is becoming the major technical bottleneck for mesoscale connectomics. Current computational solutions are labor intensive with limited applications because of the exhaustive manual annotation and heavily customized training. In this repository, we provide an automated method for axon data annotation and segmentation, significantly reducing the workload of labeling. In addition, we offer segmentation models for five distinct types of axons, as well as a comprehensive axon segmentation model with enhanced generalizability, trained on a large dataset of axon cubes that encapsulates the features of all five axon types. Researchers can utilize these models for fine-tuning in subsequent personalized tasks.
+>Recent proliferation and integration of tissue-clearing methods and light-sheet fluorescence microscopy has created new opportunities to achieve mesoscale three-dimensional whole-brain connectivity mapping with exceptionally high throughput. With the rapid generation of large, high-quality imaging datasets, downstream analysis is becoming the major technical bottleneck for mesoscale connectomics. Current computational solutions are labor intensive with limited applications because of the exhaustive manual annotation and heavily customized training. In this repository, we provide an automated pipeline for axon data annotation and segmentation, greatly reducing the workload of labour-intensive manual input. In addition, we offer segmentation models for five distinct types of axons, as well as an jointly trained axon segmentation model with enhanced generalizability. Researchers can use  these models for fine-tuning in subsequent personalized tasks.
 
 
 ## Dataset Links
 
-Here, we provide the training data for five types of neurons. Detailed information on their data sources, collection methods, and more is outlined below. The training data we utilized encompasses all data within the blue dashed lines.
-
-![datainfo](asset/data_info.png)
-
 The data volume information for the five datasets is as follows. We have trained segmentation models for each type of axon using these five datasets. Additionally, we have also trained a more generalized comprehensive model using a combined dataset from all five categories (4714 cubes after data augmentation). Please download these models via the provided [model link](https://drive.google.com/drive/folders/1vhuGGnnwYdZ_oDq2N0TOCqkUrrgOAC0l?usp=drive_link) based on your specific needs.
 
-|   Brain name   |   Whole-brain resolution   | No. of axon cubes | No. of artefact cubes | No. of cubes after data augmentation |        Cube Size        |                          Data link                           |
-| :------------: | :------------------------: | :---------------: | :-------------------: | :----------------------------------: | :---------------------: | :----------------------------------------------------------: |
-| Sert- Stanford | $2160\times2560\times2078$ |        46         |          54           |                 1040                 | $150\times150\times150$ | [link](https://drive.google.com/file/d/1YIWinuBUy11zOnAL1j0szptxMTVoyITd/view?usp=drive_link) |
-|  DCN-Stanford  | $2160\times2560\times1892$ |        49         |          47           |                 725                  | $150\times150\times150$ | [link](https://drive.google.com/file/d/1Yuj1HS_gcERKsHQwEyFGmgCk20wwS00m/view?usp=drive_link) |
-|   Sert-NIBS    | $7233\times7199\times1184$ |        86         |          10           |                 1024                 | $150\times150\times150$ | [link](https://drive.google.com/file/d/1ZDGdDyEEe3sEEguXR7E0ubJjBff4BWHK/view?usp=drive_link) |
-|   GABA-NIBS    | $3753\times3748\times997$  |        91         |          45           |                 1452                 | $150\times150\times150$ | [link](https://drive.google.com/file/d/1U_yj5ovmtXOJZE50McJ17VQvgCC5Y6jv/view?usp=drive_link) |
-|    DA-NIBS     | $3691\times3602\times1023$ |        84         |          100          |                 1156                 | $150\times150\times150$ | [link](https://drive.google.com/file/d/1Iw8nzv530L6NCinvMXvg2RwTF1PK-xx4/view?usp=drive_link) |
+|           Neuron type            |   Whole-brain resolution   | No. of axon cubes | No. of artefact cubes | No. of cubes after data augmentation |        Cube Size        |                          Data link                           |
+| :------------------------------: | :------------------------: | :---------------: | :-------------------: | :----------------------------------: | :---------------------: | :----------------------------------------------------------: |
+|   Serotonergic sparse stained    | $2160\times2560\times2078$ |        46         |          54           |                 1040                 | $150\times150\times150$ | [link](https://drive.google.com/file/d/1YIWinuBUy11zOnAL1j0szptxMTVoyITd/view?usp=drive_link) |
+| Cerebellar nuclei sparse stained | $2160\times2560\times1892$ |        49         |          47           |                 725                  | $150\times150\times150$ | [link](https://drive.google.com/file/d/1Yuj1HS_gcERKsHQwEyFGmgCk20wwS00m/view?usp=drive_link) |
+|    Serotonergic dense stained    | $7233\times7199\times1184$ |        86         |          10           |                 1024                 | $150\times150\times150$ | [link](https://drive.google.com/file/d/1ZDGdDyEEe3sEEguXR7E0ubJjBff4BWHK/view?usp=drive_link) |
+|     GABAergic dense stained      | $3753\times3748\times997$  |        91         |          45           |                 1452                 | $150\times150\times150$ | [link](https://drive.google.com/file/d/1U_yj5ovmtXOJZE50McJ17VQvgCC5Y6jv/view?usp=drive_link) |
+|    Dopaminergic dense stained    | $3691\times3602\times1023$ |        84         |          100          |                 1156                 | $150\times150\times150$ | [link](https://drive.google.com/file/d/1Iw8nzv530L6NCinvMXvg2RwTF1PK-xx4/view?usp=drive_link) |
 
 ## Get Started
 
