@@ -1,4 +1,4 @@
-# Axon-Seg
+# Axon-Seg: an end-to-end pipeline for whole-brain axon segmentation
 
 #### **D-LMBmap: a fully automated deep-learning pipeline for whole-brain profiling of neural circuitry** 
 
@@ -7,10 +7,10 @@
 ![pipeline](asset/pipeline.png)
 
 ## Key Features
-
-- Can achieve automated axon segmentation from small cubes to whole brain
-- An automated axon annotation toolkit is provided, significantly reducing the workload of 3D labeling.
-- Pre-trained models for segmenting five specific types of axons and comprehensive axon segmentation are available. These models can be utilized by users for application and fine-tuning within specialized tasks.
+This is the repo for the paper D-LMBmap: a fully automated deep-learning pipeline for whole-brain profiling of neural circuitry:
+- An end-to-end pipeline for whole-brain axon segmentation and profiling
+- Five types of neurons, including serotonergic, GABAergic, dopaminergic, and Cerebellar nuclei neurons, are used to train the automated segmentation models separately and jointly
+- An automated annotation toolkit is provided, greatly reducing the labour-intensive manual input
 
 ## Links
 
@@ -25,11 +25,11 @@
 
 ## Dataset Links
 
-Here, we provide the training data for five types of axons. Detailed information on their data sources, collection methods, and more is outlined below. The training data we utilized encompasses all data within the blue dashed lines.
+Here, we provide the training data for five types of neurons. Detailed information on their data sources, collection methods, and more is outlined below. The training data we utilized encompasses all data within the blue dashed lines.
 
 ![datainfo](asset/data_info.png)
 
-The data volume information for the five datasets is as follows. We have trained segmentation models for each type of axon using these five datasets. Additionally, we have also trained a more generalized comprehensive model using a combined dataset from all five categories (4714 cubes after data augmentation). Please can download these models via the provided [model link](https://drive.google.com/drive/folders/1vhuGGnnwYdZ_oDq2N0TOCqkUrrgOAC0l?usp=drive_link) based on your specific needs.
+The data volume information for the five datasets is as follows. We have trained segmentation models for each type of axon using these five datasets. Additionally, we have also trained a more generalized comprehensive model using a combined dataset from all five categories (4714 cubes after data augmentation). Please download these models via the provided [model link](https://drive.google.com/drive/folders/1vhuGGnnwYdZ_oDq2N0TOCqkUrrgOAC0l?usp=drive_link) based on your specific needs.
 
 |   Brain name   |   Whole-brain resolution   | No. of axon cubes | No. of artefact cubes | No. of cubes after data augmentation |        Cube Size        |                          Data link                           |
 | :------------: | :------------------------: | :---------------: | :-------------------: | :----------------------------------: | :---------------------: | :----------------------------------------------------------: |
@@ -115,7 +115,7 @@ python create_data.py --base BASE_PATH --source SOURCE_PATH --task_id ID --task_
 
 ### **Preprocessing for training axon segmentation model**
 
-After step 1 the raw training dataset will be in the folder prepared in step 0 (`DATASET/raw_data_base/nnUNet_raw_data/TaskXXX_MYTASK`, 
+After last step the raw training dataset will be in the folder prepared in `DATASET/raw_data_base/nnUNet_raw_data/TaskXXX_MYTASK`, 
 where task id `XXX` and task name `MYTASK` are set in `create_data.py`. 
 
 For training our model, a preprocessing procedure is needed. Run this command:
@@ -129,7 +129,7 @@ There are several additional input arguments for this command. Running `-h` will
 
 ### **Training**
 
-Our model trains all U-Net configurations in a 5-fold cross-validation. This enables the model to determine the postprocessing and ensembling (see next step) on the training dataset. 
+Our model trains all U-Net configurations in a 5-fold cross-validation. This enables the model to determine the postprocessing and ensembling on the training dataset. 
 Training models is done with the `nnUNet_train` command. The general structure of the command is:
 
 ```bash
