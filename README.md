@@ -177,8 +177,7 @@ Only specify `--save_npz` if you intend to use ensembling. `--save_npz` will mak
 nnUNet_predict -i INPUT_FOLDER -o OUTPUT_FOLDER -t XXX --tr MyTrainerAxial -m 3d_fullres -p nnUNetPlansv2.1_16GB
 ```
 
-We extract the model weights from the saved checkpoint files(e.g. model_final_checkpoint.model) to `pth` files.
-Run `python save_models.py`. The `pth` file will be used for whole brain axon prediction.
+We extract the model weights from the saved checkpoint files(e.g. model_final_checkpoint.model) to `pth` files by running `python save_models.py`. The `pth` file will be used for whole brain axon prediction.
 
 ## 🙋‍♀️ Feedback and Contact
 
