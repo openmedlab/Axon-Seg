@@ -20,16 +20,7 @@
 
 ## Details
 
-intro text here.
-
-<!-- Insert a pipeline of your algorithm here if got one -->
-
-<div align="center">
-    <a href="https://"><img width="1000px" height="auto" src="https://github.com/openmedlab/sampleProject/blob/main/diagram_sample.png"></a>
-</div>
-
-
-More intro text here.
+>Recent proliferation and integration of tissue-clearing methods and light-sheet fluorescence microscopy has created new opportunities to achieve mesoscale three-dimensional whole-brain connectivity mapping with exceptionally high throughput. With the rapid generation of large, high-quality imaging datasets, downstream analysis is becoming the major technical bottleneck for mesoscale connectomics. Current computational solutions are labor intensive with limited applications because of the exhaustive manual annotation and heavily customized training. In this repository, we provide an automated method for axon data annotation, significantly reducing the workload of labeling. In addition, we offer segmentation models for five distinct types of axons, as well as a comprehensive axon segmentation model with enhanced generalizability, trained on a large dataset of axon cubes that encapsulates the features of all five axon types. Researchers can utilize these models for fine-tuning in subsequent personalized tasks.
 
 
 ## Dataset Links
