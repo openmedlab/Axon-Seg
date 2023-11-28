@@ -40,13 +40,13 @@ Here, we provide the training data for five types of axons. Detailed information
 
 The data volume information for the five datasets is as follows. We have trained segmentation models for each type of axon using these five datasets. Additionally, we have also trained a more generalized comprehensive model using a combined dataset from all five categories. You can download these models via the provided [model link](https://drive.google.com/drive/folders/1vhuGGnnwYdZ_oDq2N0TOCqkUrrgOAC0l?usp=drive_link) based on your specific needs.
 
-| Brain name     | Whole-brain resolution   | No. of axon cubes | No. of artefact cubes | No. of cubes after data augmentation | Cube Size             | Data link                                                    |
-| -------------- | ------------------------ | ----------------- | --------------------- | ------------------------------------ | --------------------- | ------------------------------------------------------------ |
-| Sert- Stanford | 2160\times2560\times2078 | 46                | 54                    | 1040                                 | 150\times150\times150 | [link](https://drive.google.com/file/d/1YIWinuBUy11zOnAL1j0szptxMTVoyITd/view?usp=drive_link) |
-| DCN-Stanford   | 2160\times2560\times1892 | 49                | 47                    | 725                                  | 150\times150\times150 | [link](https://drive.google.com/file/d/1Yuj1HS_gcERKsHQwEyFGmgCk20wwS00m/view?usp=drive_link) |
-| Sert-NIBS      | 7233\times7199\times1184 | 86                | 10                    | 1024                                 | 150\times150\times150 | [link](https://drive.google.com/file/d/1ZDGdDyEEe3sEEguXR7E0ubJjBff4BWHK/view?usp=drive_link) |
-| GABA-NIBS      | 3753\times3748\times997  | 91                | 45                    | 1452                                 | 150\times150\times150 | [link](https://drive.google.com/file/d/1U_yj5ovmtXOJZE50McJ17VQvgCC5Y6jv/view?usp=drive_link) |
-| DA-NIBS        | 3691\times3602\times1023 | 84                | 100                   | 1156                                 | 150\times150\times150 | [link](https://drive.google.com/file/d/1Iw8nzv530L6NCinvMXvg2RwTF1PK-xx4/view?usp=drive_link) |
+| Brain name     | Whole-brain resolution     | No. of axon cubes | No. of artefact cubes | No. of cubes after data augmentation | Cube Size               | Data link                                                    |
+| -------------- | -------------------------- | ----------------- | --------------------- | ------------------------------------ | ----------------------- | ------------------------------------------------------------ |
+| Sert- Stanford | $2160\times2560\times2078$ | 46                | 54                    | 1040                                 | $150\times150\times150$ | [link](https://drive.google.com/file/d/1YIWinuBUy11zOnAL1j0szptxMTVoyITd/view?usp=drive_link) |
+| DCN-Stanford   | $2160\times2560\times1892$ | 49                | 47                    | 725                                  | $150\times150\times150$ | [link](https://drive.google.com/file/d/1Yuj1HS_gcERKsHQwEyFGmgCk20wwS00m/view?usp=drive_link) |
+| Sert-NIBS      | $7233\times7199\times1184$ | 86                | 10                    | 1024                                 | $150\times150\times150$ | [link](https://drive.google.com/file/d/1ZDGdDyEEe3sEEguXR7E0ubJjBff4BWHK/view?usp=drive_link) |
+| GABA-NIBS      | $3753\times3748\times997$  | 91                | 45                    | 1452                                 | $150\times150\times150$ | [link](https://drive.google.com/file/d/1U_yj5ovmtXOJZE50McJ17VQvgCC5Y6jv/view?usp=drive_link) |
+| DA-NIBS        | $3691\times3602\times1023$ | 84                | 100                   | 1156                                 | $150\times150\times150$ | [link](https://drive.google.com/file/d/1Iw8nzv530L6NCinvMXvg2RwTF1PK-xx4/view?usp=drive_link) |
 
 
 
